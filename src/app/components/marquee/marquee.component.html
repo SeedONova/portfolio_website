@@ -1,0 +1,9 @@
+<div class="marquee">
+    <div class="marquee-content">
+      <ng-container *ngFor="let src of list; let i = index">
+        <div class="inline-block mx-10">
+          <img [src]="src" [style.height.px]="150" style="object-fit: contain;" [alt]="'Landing Page ' + (i + 1)">
+        </div>
+      </ng-container>
+    </div>
+</div>

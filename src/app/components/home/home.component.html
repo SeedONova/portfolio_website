@@ -1,0 +1,141 @@
+<div class="w-full px-[125px] py-5 bg-[#191514]">
+  <div class="flex justify-between text-[#d4ccca] items-center">
+    <div class="font-bold text-[25px]">Predana</div>
+    <div class="flex space-x-12">
+      <div (click)="scrollToMyExperience()" class="cursor-pointer">
+        Experience
+      </div>
+      <div (click)="scrollToTools()" class="cursor-pointer">Tools</div>
+      <div (click)="scrollToPortfolio()" class="cursor-pointer">Portofolio</div>
+    </div>
+
+    <a
+      class="flex items-center bg-[#9a5c43] px-2 py-1 rounded-md text-[18px]"
+      routerLink="/contact"
+      routerLinkActive="active"
+    >
+      Let's Talk!
+    </a>
+  </div>
+</div>
+
+<div class="flex flex-col items-center">
+  <div
+    class="flex items-center w-full px-[200px] py-[100px] bg-cover h-[600px]"
+    style="
+      background-image: linear-gradient(
+          rgba(25, 21, 20, 0.45),
+          rgba(25, 21, 20, 1) 93%
+        ),
+        url('https://www.cio.com/wp-content/uploads/2023/05/smart-cities-3.0-verticals-100851200-orig-1.jpg?quality=50&strip=all');
+    "
+  >
+    <div class="flex justify-between w-full items-center pb-[80px]">
+      <div class="flex flex-col space-y-2 leading-10">
+        <div class="text-[40px] font-bold text-[#d4ccca] text-cotainer-1">
+          <p class="typewriter-1">Hi, Just Call Me Predana!</p>
+        </div>
+        <div class="text-[25px] pb-3 text-[#d4ccca] text-cotainer-2">
+          <p class="typewriter-2 w-fit">Your Digital Solution Builder.</p>
+        </div>
+        <div class="flex space-x-2">
+          <a href="https://www.linkedin.com/in/putubaguswidia/" target="_blank">
+            <span
+              class="icon-[mdi--linkedin] text-[50px] text-[#d4ccca]"
+            ></span>
+          </a>
+          <a href="https://github.com/SeedONova" target="_blank">
+            <span class="icon-[mdi--github] text-[50px] text-[#d4ccca]"></span>
+          </a>
+        </div>
+      </div>
+      <div class="w-[300px]">
+        <img class="rounded-full" alt="" src="./assets/my_pic.jpeg" />
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex flex-col bg-[#191514] w-full px-[200px] pt-[50px] items-center text-[#d4ccca] space-y-2 pb-[150px]"
+  >
+    <div class="text-[30px] font-bold" #myExperience>My Experience</div>
+    <div class="pb-12">I love to explore things and create impact!</div>
+    <div class="grid grid-cols-3 gap-[20px]">
+      <div
+        class="flex flex-col items-center text-[#191514]"
+        *ngFor="let experience of experiences"
+      >
+        <div class="w-[80px] -mb-10 z-10 border-4 rounded-full">
+          <img class="rounded-full" alt="" [src]="experience.logoUrl" />
+        </div>
+        <div
+          class="flex flex-col rounded-md px-[25px] py-5 pt-[55px] items-center bg-[#d4ccca] pb-10 w-[250px] text-center"
+        >
+          <div class="text-[20px] font-semibold">
+            {{ experience.title }}
+          </div>
+          <div class="text-[18px]">
+            {{ experience.company }}
+          </div>
+          <div class="text-[14px]">
+            {{ experience.period }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex flex-col px-[100px] w-full bg-[#191514] items-center space-y-2 text-[#d4ccca]"
+  >
+    <div class="text-[30px] font-bold" #tools>Tools</div>
+    <div class="pb-12">Nextjs and SpringBoot are my favorites so far</div>
+    <app-marquee></app-marquee>
+  </div>
+  <div
+    class="flex flex-col py-[150px] items-center space-y-2 text-[#d4ccca] px-[200px] w-full"
+  >
+    <div class="text-[30px] font-bold" #portfolio>Portfolio</div>
+    <div class="pb-12">This is my lovely portofolio</div>
+    <div class="flex flex-col space-y-6">
+      <div class="flex w-full bg-[#d4ccca] text-[#191514] rounded-md">
+        <div>
+          <img
+            src="./assets/portfolio/porto-1.png"
+            alt=""
+            class="rounded-l-md"
+          />
+        </div>
+        <div class="flex flex-col p-6">
+          <div class="text-[25px] font-bold">Mulah Reporting App</div>
+          <hr class="border-[#191514] border-1" />
+          <br />
+          <div class="w-[600px] text-wrap">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            eaque facilis vel, consequuntur harum magni assumenda fugiat velit
+            quam quasi sed illum quidem dicta odio esse commodi aut voluptas
+            ipsum.
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full bg-[#d4ccca] text-[#191514] rounded-md">
+        <div>
+          <img
+            src="./assets/portfolio/porto-2.png"
+            alt=""
+            class="rounded-l-md h-full"
+          />
+        </div>
+        <div class="flex flex-col p-6">
+          <div class="text-[25px] font-bold">The Catasthroper</div>
+          <hr class="border-[#191514] border-1" />
+          <br />
+          <div class="w-[600px] text-wrap">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            eaque facilis vel, consequuntur harum magni assumenda fugiat velit
+            quam quasi sed illum quidem dicta odio esse commodi aut voluptas
+            ipsum.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
